@@ -10,6 +10,12 @@
 
 > REST API to search for artistic social media.
 
+### TO-DO
+
+- [ ] Google Drive integration
+- [ ] Put all artist’s social media in the Google Drive document
+- [ ] Request with more than 1 artistic
+
 ## 💻 Prerequisites
 
 * [JDK 11](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html)
