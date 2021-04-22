@@ -14,14 +14,17 @@ import java.security.GeneralSecurityException;
 @Component
 public class CustomSearchFactory {
 
-    @Value("${search-artistic-social-media.api-key}")
-    private String key;
+    @Value("${application.name}")
+    private String applicationName;
+    @Value("${application.api-key}")
+    private String apiKey;
+
 
     @SneakyThrows({GeneralSecurityException.class, IOException.class})
     public Customsearch create() {
         return new Customsearch.Builder(GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(), null)
-                .setApplicationName("search-artistic-social-media")
-                .setGoogleClientRequestInitializer(new CustomsearchRequestInitializer(key))
+                .setApplicationName(applicationName)
+                .setGoogleClientRequestInitializer(new CustomsearchRequestInitializer(apiKey))
                 .build();
     }
 

@@ -1,3 +1,4 @@
-search-artistic-social-media:
+application:
+  name: search-artistic-social-media
   # API KEY: https://developers.google.com/custom-search/v1/introduction/?authuser=4
   api-key: YOUR API KEY
